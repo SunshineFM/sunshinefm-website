@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+Sitemap: https://sunshine.fm/sitemap.xml
