@@ -1,15 +1,15 @@
 ---
-title: While You Were Away — November 20, 2024 - Summary
-date: 2024-11-20T11:11:00-08:00
+title: While You Were Away - August 21, 2024 - Summary
+date: 2024-08-21T11:11:00-08:00
 ---
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "RadioEpisode",
-  "name": "While You Were Away \u2014 November 20, 2024",
-  "description": "This Sunshine FM episode delves into the growing gap between the wealthy elite preparing for an AI-driven future and the slow adaptation of public education. The host explores the paradox of billionaires building bunkers while simultaneously lamenting the lack of AI education in schools, drawing insights from a recent podcast featuring Peter Diamandes and Tony Robbins. The episode discusses the potential creation of a two-tier future where those with access to private AI education gain a significant advantage due to early exposure and a culture of experimentation. The host contends that while open-source AI democratizes access to tools, mindset and permission are key factors in fostering true AI literacy and innovation.",
-  "datePublished": "2024-11-20T11:11:00-08:00",
+  "name": "While You Were Away - August 21, 2024",
+  "description": "This radio episode delves into the growing divide in AI education and preparedness. The host discusses how billionaires are both building physical bunkers in anticipation of societal instability and investing in private AI education for their children, highlighting a lack of confidence in the public education system's ability to keep pace with technological advancements. The episode explores the optimist, doom and gloom, and truth in the middle perspectives on this issue, emphasizing that access to AI tools is less critical than fostering a culture of experimentation, confidence, and a can-do mindset.\n\nThe host examines the challenges of integrating AI education into existing school systems, citing slow institutional responses, bureaucratic hurdles, and resistance from unions and parents. The discussion proposes starting small with pilot programs and partnerships with universities to demonstrate the value of AI-native education. The episode concludes with a call for visionary leadership, capital, and permission to build a parallel track for AI education and create opportunities for all students, regardless of their socio-economic background.",
+  "datePublished": "2024-08-21T11:11:00-08:00",
   "keywords": "#ai, #startups, #coachella-valley",
   "author": {
     "@type": "Organization",
@@ -24,11 +24,13 @@ date: 2024-11-20T11:11:00-08:00
 
 ## Summary
 
-This Sunshine FM episode delves into the growing gap between the wealthy elite preparing for an AI-driven future and the slow adaptation of public education. The host explores the paradox of billionaires building bunkers while simultaneously lamenting the lack of AI education in schools, drawing insights from a recent podcast featuring Peter Diamandes and Tony Robbins. The episode discusses the potential creation of a two-tier future where those with access to private AI education gain a significant advantage due to early exposure and a culture of experimentation. The host contends that while open-source AI democratizes access to tools, mindset and permission are key factors in fostering true AI literacy and innovation.
+This radio episode delves into the growing divide in AI education and preparedness. The host discusses how billionaires are both building physical bunkers in anticipation of societal instability and investing in private AI education for their children, highlighting a lack of confidence in the public education system's ability to keep pace with technological advancements. The episode explores the optimist, doom and gloom, and truth in the middle perspectives on this issue, emphasizing that access to AI tools is less critical than fostering a culture of experimentation, confidence, and a can-do mindset.
+
+The host examines the challenges of integrating AI education into existing school systems, citing slow institutional responses, bureaucratic hurdles, and resistance from unions and parents. The discussion proposes starting small with pilot programs and partnerships with universities to demonstrate the value of AI-native education. The episode concludes with a call for visionary leadership, capital, and permission to build a parallel track for AI education and create opportunities for all students, regardless of their socio-economic background.
 
 ### Key Insights
 
-- Billionaires are hedging against an uncertain future by building both physical bunkers and investing in private AI education for their children.
-- The education system is slow to adapt to the changes brought about by AI, creating a gap between those with access to private education and those in public schools.
-- Mindset is key to AI adoption and success; early exposure and a culture of experimentation can provide a significant advantage.
+- Billionaires are preparing for potential societal chaos by building bunkers and securing resources, while simultaneously investing in private AI education for their children.
+- The education system's slow adoption of AI is creating a gap where wealthy individuals have access to cutting-edge knowledge and skills, while others are left behind.
+- Solving the education gap requires visionary leadership, capital, and permission, and early exposure to I can build mindset
 
