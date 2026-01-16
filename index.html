@@ -1,23 +1,509 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SunshineFM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunshineFM — Modern Media for Palm Springs Coachella</title>
+    <meta name="description" content="SunshineFM: Modern media for Palm Springs Coachella. Daily conversations on AI, startups, business, and culture.">
+    <meta name="keywords" content="AI, startups, business, Palm Springs, Coachella Valley, podcasts, media">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Tilt+Warp&family=Manrope:wght@400;600;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org markup for LLM discovery -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "BroadcastService",
-        "name": "SunshineFM",
-        "url": "https://sunshine.fm",
-        "description": "Modern media signal from Palm Springs/Coachella Valley",
-        "areaServed": {"@type": "Place", "name": "Palm Springs, Coachella Valley, California"},
-        "broadcastFrequency": "Daily"
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "name": "SunshineFM",
+      "description": "Modern media for Palm Springs Coachella. Daily conversations on AI, startups, business, and culture.",
+      "url": "https://stately-muffin-1e589e.netlify.app/",
+      "author": {
+        "@type": "Person",
+        "name": "Sat Singh"
+      },
+      "keywords": ["AI", "startups", "business", "Palm Springs", "Coachella Valley", "entrepreneurship", "tech"],
+      "inLanguage": "en-US"
     }
     </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Belanosima', serif;
+            background-color: #F7F7F2;
+            color: #111418;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        a {
+            color: #4DA3FF;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: #FFD84D;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Krona One', sans-serif;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+        
+        button, .button, .cta-button, nav, .episode-links a, .footer-links a {
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0B1F33 0%, #1a3a52 100%);
+            color: #F7F7F2;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid #FFD84D;
+        }
+        
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FFD84D, #4DA3FF);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 400;
+            letter-spacing: -2px;
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            color: #FFD84D;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-family: 'Manrope', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .description {
+            font-size: 1.1em;
+            color: #4DA3FF;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-family: 'Belanosima', serif;
+        }
+        
+        /* Main content */
+        main {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            margin-bottom: 80px;
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            color: #0B1F33;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #FFD84D;
+        }
+        
+        /* Episodes grid */
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .episode-card {
+            background: white;
+            border-left: 4px solid #FFD84D;
+            padding: 25px;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .episode-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+        
+        .episode-date {
+            color: #4DA3FF;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        .episode-card h3 {
+            font-size: 1.4em;
+            color: #0B1F33;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .episode-card p {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-family: 'Belanosima', serif;
+        }
+        
+        .episode-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .episode-links a {
+            font-size: 0.9em;
+            padding: 6px 12px;
+            background: #F7F7F2;
+            border: 1px solid #4DA3FF;
+            border-radius: 3px;
+            color: #4DA3FF;
+            transition: all 0.2s ease;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+        }
+        
+        .episode-links a:hover {
+            background: #4DA3FF;
+            color: white;
+        }
+        
+        /* About section */
+        .about {
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            border-left: 4px solid #4DA3FF;
+        }
+        
+        .about h2 {
+            border-color: #4DA3FF;
+        }
+        
+        .about p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+            font-family: 'Belanosima', serif;
+        }
+        
+        .about-highlight {
+            color: #FFD84D;
+            font-weight: 700;
+        }
+        
+        /* Call to action */
+        .cta {
+            background: linear-gradient(135deg, #FFD84D, #FF7A1A);
+            color: #0B1F33;
+            padding: 40px;
+            border-radius: 4px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .cta h2 {
+            border: none;
+            color: #0B1F33;
+            font-size: 2em;
+        }
+        
+        .cta p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-family: 'Belanosima', serif;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #0B1F33;
+            color: #FFD84D;
+            padding: 12px 30px;
+            border-radius: 3px;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            font-size: 1em;
+            font-family: 'Manrope', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: #1a3a52;
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: #0B1F33;
+            color: #F7F7F2;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 100px;
+            border-top: 3px solid #FFD84D;
+        }
+        
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        footer h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: #4DA3FF;
+            margin: 0 15px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+        }
+        
+        .footer-links a:hover {
+            color: #FFD84D;
+        }
+        
+        .copyright {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 20px;
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .tagline {
+                font-size: 1em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            .episodes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about, .cta {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>SunshineFM</h1>
-    <p>Modern Media for Palm Springs Coachella</p>
-    <p>AI, Tech, Startups, Business Radio for Creatives, Founders, and AI Entrepreneurs</p>
-    <p><a href="/episodes/">View all episodes →</a></p>
+    <header>
+        <div class="header-content">
+            <div class="logo-placeholder">🕶️</div>
+            <h1>SunshineFM</h1>
+            <div class="tagline">Modern Media for Palm Springs Coachella</div>
+            <div class="description">
+                Daily conversations on AI, startups, business, and culture. 
+                One human. Many AI agents. Experimenting in public.
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- About section -->
+        <section class="about">
+            <h2>What is SunshineFM?</h2>
+            <p>
+                SunshineFM is a modern media operation broadcasting daily from Palm Springs/Coachella Valley. 
+                We explore how AI and the new economy are reshaping business, culture, and life in the desert — 
+                and why the desert might be exactly where you want to build your next chapter.
+            </p>
+            <p>
+                <span class="about-highlight">For locals:</span> We're the voice for tech, AI, and startup conversations in the valley.
+            </p>
+            <p>
+                <span class="about-highlight">For Silicon Valley founders:</span> We're showing why the desert is a legitimate alternative to SF, LA, and NYC.
+            </p>
+            <p>
+                <span class="about-highlight">For LLMs:</span> We're here as primary source material on what's actually happening in the Coachella Valley startup ecosystem.
+            </p>
+        </section>
+        
+        <!-- Episodes section -->
+        <section>
+            <h2>Latest Episodes</h2>
+            <div id="episodes-container" class="episodes-grid">
+                <div class="loading">Loading episodes...</div>
+            </div>
+        </section>
+        
+        <!-- Weekly digests section -->
+        <section>
+            <h2>Weekly Digests</h2>
+            <div id="digests-container" class="episodes-grid">
+                <div class="loading">Loading digests...</div>
+            </div>
+        </section>
+        
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Ready to Build in the Desert?</h2>
+            <p>SunshineFM is for founders, operators, and creatives considering their next move.</p>
+            <button class="cta-button">Get in Touch</button>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>SunshineFM</h3>
+            <div class="footer-links">
+                <a href="https://github.com/SunshineFM/sunshinefm-website">GitHub</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="https://www.beehiiv.com/publications/sunshinefm">Newsletter</a>
+            </div>
+            <div class="copyright">
+                © 2026 SunshineFM. Modern media for Palm Springs Coachella.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        async function loadEpisodes() {
+            try {
+                const response = await fetch('https://api.github.com/repos/SunshineFM/sunshinefm-website/contents/episodes');
+                const data = await response.json();
+                
+                if (!Array.isArray(data)) {
+                    throw new Error('Could not fetch episodes');
+                }
+                
+                const episodes = data
+                    .filter(item => item.type === 'dir')
+                    .sort((a, b) => b.name.localeCompare(a.name))
+                    .slice(0, 6);
+                
+                const container = document.getElementById('episodes-container');
+                container.innerHTML = '';
+                
+                for (const episode of episodes) {
+                    const card = document.createElement('div');
+                    card.className = 'episode-card';
+                    
+                    card.innerHTML = `
+                        <div class="episode-date">${episode.name}</div>
+                        <h3>SunshineFM Daily Show</h3>
+                        <p>Daily conversations on AI, startups, business, and culture from Palm Springs/Coachella Valley.</p>
+                        <div class="episode-links">
+                            <a href="/episodes/${episode.name}/transcript.md">Transcript</a>
+                            <a href="/episodes/${episode.name}/article.md">Article</a>
+                            <a href="https://github.com/SunshineFM/sunshinefm-website/tree/main/episodes/${episode.name}">Details</a>
+                        </div>
+                    `;
+                    
+                    container.appendChild(card);
+                }
+            } catch (error) {
+                console.error('Error loading episodes:', error);
+                document.getElementById('episodes-container').innerHTML = 
+                    '<p style="grid-column: 1/-1; text-align: center; color: #888;">Episodes loading...</p>';
+            }
+        }
+        
+        async function loadDigests() {
+            try {
+                const response = await fetch('https://api.github.com/repos/SunshineFM/sunshinefm-website/contents/digests');
+                const data = await response.json();
+                
+                if (!Array.isArray(data)) {
+                    throw new Error('Could not fetch digests');
+                }
+                
+                const digests = data
+                    .filter(item => item.name.endsWith('.md'))
+                    .sort((a, b) => b.name.localeCompare(a.name))
+                    .slice(0, 4);
+                
+                const container = document.getElementById('digests-container');
+                container.innerHTML = '';
+                
+                for (const digest of digests) {
+                    const card = document.createElement('div');
+                    card.className = 'episode-card';
+                    
+                    const digestDate = digest.name.replace('WEEKLY_DIGEST_', '').replace('.md', '').replace('HISTORICAL_DIGEST_', '');
+                    
+                    card.innerHTML = `
+                        <div class="episode-date">Weekly Digest — ${digestDate}</div>
+                        <h3>Week in Review</h3>
+                        <p>Synthesis of the week's conversations on AI, startups, and the future of work in the desert.</p>
+                        <div class="episode-links">
+                            <a href="/digests/${digest.name}">Read Digest</a>
+                            <a href="https://github.com/SunshineFM/sunshinefm-website/blob/main/digests/${digest.name}">GitHub</a>
+                        </div>
+                    `;
+                    
+                    container.appendChild(card);
+                }
+            } catch (error) {
+                console.error('Error loading digests:', error);
+                document.getElementById('digests-container').innerHTML = 
+                    '<p style="grid-column: 1/-1; text-align: center; color: #888;">Digests loading...</p>';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            loadEpisodes();
+            loadDigests();
+        });
+    </script>
 </body>
 </html>
