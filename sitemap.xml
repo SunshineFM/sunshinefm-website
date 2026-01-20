@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Local Intelligence (Priority: Daily signal) -->
   <url>
+    <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-19_ai-tooling-shifts-from-intelligence-to-orchestration.html</loc>
+    <lastmod>2026-01-19T11:11:00-08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-16_model-wars.html</loc>
     <lastmod>2026-01-16T11:11:00-08:00</lastmod>
     <changefreq>daily</changefreq>
@@ -39,6 +45,12 @@
   </url>
 
   <!-- Episodes (Priority: Secondary) -->
+  <url>
+    <loc>https://sunshine.fm/episodes/20260119-episode/</loc>
+    <lastmod>2026-01-19T11:11:00-08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://sunshine.fm/episodes/20260116-episode/</loc>
     <lastmod>2026-01-16T11:11:00-08:00</lastmod>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>SunshineFM - Modern Media for Palm Springs Coachella</title>
+  <link>https://sunshine.fm</link>
+  <description>AI-native modern media exploring how AI and the new economy are reshaping business, culture, and second-chapter life in the Coachella Valley and beyond.</description>
+  <language>en-us</language>
+  <lastBuildDate>Mon, 19 Jan 2026 11:11:00 -0800</lastBuildDate>
+  <atom:link href="https://sunshine.fm/rss.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>AI Tooling Shifts from Intelligence to Orchestration—What Coachella Valley Operators Need to Know</title>
+    <link>https://sunshine.fm/local-intelligence/2026/january/2026-01-19_ai-tooling-shifts-from-intelligence-to-orchestration.html</link>
+    <description>The models are commoditizing. The real competitive advantage is moving to orchestration. Here's what local operators need to understand about building systems in 2026.</description>
+    <pubDate>Mon, 19 Jan 2026 11:11:00 -0800</pubDate>
+    <guid>https://sunshine.fm/local-intelligence/2026/january/2026-01-19_ai-tooling-shifts-from-intelligence-to-orchestration.html</guid>
+  </item>
+
+  <item>
+    <title>The Model Wars Are Over—Now What?</title>
+    <link>https://sunshine.fm/local-intelligence/2026/january/2026-01-16_model-wars.html</link>
+    <description>OpenAI, Google, and Anthropic are locked in a three-way battle. But for local operators in Coachella Valley, the real question isn't who wins—it's what you build while they fight.</description>
+    <pubDate>Thu, 16 Jan 2026 11:11:00 -0800</pubDate>
+    <guid>https://sunshine.fm/local-intelligence/2026/january/2026-01-16_model-wars.html</guid>
+  </item>
+
+  <item>
+    <title>AI Consolidation Begins</title>
+    <link>https://sunshine.fm/local-intelligence/2026/january/2026-01-15_consolidation.html</link>
+    <description>The AI ecosystem is consolidating faster than expected. What this means for startups, agencies, and operators in the Coachella Valley.</description>
+    <pubDate>Wed, 15 Jan 2026 11:11:00 -0800</pubDate>
+    <guid>https://sunshine.fm/local-intelligence/2026/january/2026-01-15_consolidation.html</guid>
+  </item>
+
+  <item>
+    <title>The Education Gap Widens</title>
+    <link>https://sunshine.fm/local-intelligence/2026/january/2026-01-14_education-gap.html</link>
+    <description>While AI tools become more accessible, the education gap grows. Local institutions need to move faster to prepare the next generation.</description>
+    <pubDate>Tue, 14 Jan 2026 11:11:00 -0800</pubDate>
+    <guid>https://sunshine.fm/local-intelligence/2026/january/2026-01-14_education-gap.html</guid>
+  </item>
+
+  <item>
+    <title>The AGI Distraction</title>
+    <link>https://sunshine.fm/local-intelligence/2026/january/2026-01-13_agi-distraction.html</link>
+    <description>Everyone's talking about AGI. But for businesses in Palm Springs Coachella, that's the wrong conversation to be having right now.</description>
+    <pubDate>Mon, 13 Jan 2026 11:11:00 -0800</pubDate>
+    <guid>https://sunshine.fm/local-intelligence/2026/january/2026-01-13_agi-distraction.html</guid>
+  </item>
+
+  <item>
+    <title>A Sonic Experiment</title>
+    <link>https://sunshine.fm/local-intelligence/2026/january/2026-01-12_sonic-experiment.html</link>
+    <description>Testing the boundaries of AI-generated audio and what it means for modern media production in the desert.</description>
+    <pubDate>Sun, 12 Jan 2026 11:11:00 -0800</pubDate>
+    <guid>https://sunshine.fm/local-intelligence/2026/january/2026-01-12_sonic-experiment.html</guid>
+  </item>
+
+  <item>
+    <title>Hello World</title>
+    <link>https://sunshine.fm/local-intelligence/2026/january/2026-01-11_hello-world.html</link>
+    <description>SunshineFM launches as an experiment in AI-native media for Palm Springs Coachella. Here's what we're building and why it matters.</description>
+    <pubDate>Sat, 11 Jan 2026 11:11:00 -0800</pubDate>
+    <guid>https://sunshine.fm/local-intelligence/2026/january/2026-01-11_hello-world.html</guid>
+  </item>
+
+</channel>
+</rss>

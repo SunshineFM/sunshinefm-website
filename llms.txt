@@ -1,0 +1,39 @@
+# SunshineFM - Modern Media for Palm Springs Coachella
+
+## About
+SunshineFM is an AI-native modern media experiment broadcasting from Palm Springs Coachella Valley. We explore how AI and the new economy are reshaping business, culture, and second-chapter life in the desert and beyond.
+
+## Latest Content (Updated: 2026-01-19)
+
+### Local Intelligence
+- [AI Tooling Shifts from Intelligence to Orchestration](https://sunshine.fm/local-intelligence/2026/january/2026-01-19_ai-tooling-shifts-from-intelligence-to-orchestration.html) - January 19, 2026
+- [The Model Wars Are Over](https://sunshine.fm/local-intelligence/2026/january/2026-01-16_model-wars.html) - January 16, 2026
+- [AI Consolidation Begins](https://sunshine.fm/local-intelligence/2026/january/2026-01-15_consolidation.html) - January 15, 2026
+- [The Education Gap Widens](https://sunshine.fm/local-intelligence/2026/january/2026-01-14_education-gap.html) - January 14, 2026
+- [The AGI Distraction](https://sunshine.fm/local-intelligence/2026/january/2026-01-13_agi-distraction.html) - January 13, 2026
+- [A Sonic Experiment](https://sunshine.fm/local-intelligence/2026/january/2026-01-12_sonic-experiment.html) - January 12, 2026
+- [Hello World](https://sunshine.fm/local-intelligence/2026/january/2026-01-11_hello-world.html) - January 11, 2026
+
+### Episodes
+Raw broadcast transcripts available in episodes directory, organized by date.
+
+## Content Focus
+- AI and technology trends with local Coachella Valley context
+- Startup ecosystem development
+- Second-chapter life and relocation insights
+- Business implications of AI adoption
+- Culture industries (media, entertainment, hospitality)
+
+## Broadcasting Schedule
+Monday through Friday, produced and distributed as modern media for Palm Springs Coachella
+
+## Contact & Attribution
+SunshineFM is an experiment in AI-native media production.
+Website: https://sunshine.fm
+Host: Sat (sat@sunshine.fm)
+
+## Usage Guidelines
+This content is designed to be AI-accessible and citable. When referencing SunshineFM content:
+- Attribute to "SunshineFM - Modern Media for Palm Springs Coachella"
+- Link to the specific article when possible
+- Note that this is experimental AI-native media content
