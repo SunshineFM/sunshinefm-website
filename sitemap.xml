@@ -1,98 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Local Intelligence (Priority: Daily signal) -->
   <url>
-    <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-19_ai-tooling-shifts-from-intelligence-to-orchestration.html</loc>
-    <lastmod>2026-01-19T11:11:00-08:00</lastmod>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-11/</loc>
+    <lastmod>2026-01-11T11:11:00-08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-16_model-wars.html</loc>
-    <lastmod>2026-01-16T11:11:00-08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-15_consolidation.html</loc>
-    <lastmod>2026-01-15T11:11:00-08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-14_education-gap.html</loc>
-    <lastmod>2026-01-14T11:11:00-08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-13_agi-distraction.html</loc>
-    <lastmod>2026-01-13T11:11:00-08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-12_sonic-experiment.html</loc>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-12/</loc>
     <lastmod>2026-01-12T11:11:00-08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sunshine.fm/local-intelligence/2026/january/2026-01-11_hello-world.html</loc>
-    <lastmod>2026-01-11T11:11:00-08:00</lastmod>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-13/</loc>
+    <lastmod>2026-01-13T11:11:00-08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Episodes (Priority: Secondary) -->
   <url>
-    <loc>https://sunshine.fm/episodes/20260119-episode/</loc>
-    <lastmod>2026-01-19T11:11:00-08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://sunshine.fm/episodes/20260116-episode/</loc>
-    <lastmod>2026-01-16T11:11:00-08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://sunshine.fm/episodes/20260115-episode/</loc>
-    <lastmod>2026-01-15T11:11:00-08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://sunshine.fm/episodes/20260114-episode/</loc>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-14/</loc>
     <lastmod>2026-01-14T11:11:00-08:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sunshine.fm/episodes/20260113-episode/</loc>
-    <lastmod>2026-01-13T11:11:00-08:00</lastmod>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-15/</loc>
+    <lastmod>2026-01-15T11:11:00-08:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sunshine.fm/episodes/20260112-episode/</loc>
-    <lastmod>2026-01-12T11:11:00-08:00</lastmod>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-16/</loc>
+    <lastmod>2026-01-16T11:11:00-08:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sunshine.fm/episodes/20260111-episode/</loc>
-    <lastmod>2026-01-11T11:11:00-08:00</lastmod>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-19/</loc>
+    <lastmod>2026-01-19T11:11:00-08:00</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
-
-  <!-- Homepage -->
   <url>
-    <loc>https://sunshine.fm/</loc>
-    <lastmod>2026-01-18T00:00:00-08:00</lastmod>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-20/</loc>
+    <lastmod>2026-01-20T11:11:00-08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-21/</loc>
+    <lastmod>2026-01-21T11:11:00-08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-22/</loc>
+    <lastmod>2026-01-22T11:11:00-08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://research.sunshine.fm/episodes/2026/january/2026-01-23/</loc>
+    <lastmod>2026-01-23T11:11:00-08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://research.sunshine.fm/</loc>
+    <lastmod>2026-01-24T00:00:00-08:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>
