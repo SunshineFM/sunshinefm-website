@@ -1,7 +1,7 @@
 # Transcript: Wednesday 01-28-2026
 
 **Type:** Daily Episode  
-**Published:** January 28, 2026 at 05:31 PM PST
+**Published:** January 28, 2026 at 06:09 PM PST
 
 ---
 
