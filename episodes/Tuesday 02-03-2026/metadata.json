@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "RadioEpisode",
+  "name": "The OpenAI Meltdown Is Actually Fascinating",
+  "description": "Sa. Well that ending wasn't too bad, was it Wasn't quite what I was looking for in terms of a 70s, laid back kind of social commentary about how the generation who were teenagers basically and young a",
+  "datePublished": "202026-02-03",
+  "url": "https://research.sunshine.fm/episodes/Tuesday 02-03-2026/",
+  "author": {
+    "@type": "Person",
+    "name": "Sat Singh",
+    "url": "https://sunshinefm.com"
+  },
+  "inLanguage": "en-US",
+  "keywords": [
+    "AI",
+    "startups",
+    "business",
+    "Palm Springs",
+    "Coachella Valley",
+    "entrepreneurship"
+  ],
+  "isPartOf": {
+    "@type": "RadioSeries",
+    "name": "SunshineFM Daily Show",
+    "description": "Daily AI, startup, and business news for Palm Springs Coachella Valley"
+  }
+}
