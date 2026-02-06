@@ -1,0 +1,239 @@
+name: Process SunshineFM Episodes
+
+on:
+  push:
+    paths:
+      - 'episodes/*/transcript.md'
+      - 'signals/*/transcript.md'
+  workflow_dispatch:  # Allow manual trigger for testing
+
+jobs:
+  extract-signals:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install anthropic
+
+      - name: Extract signals from transcript
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: |
+          python3 << 'EOF'
+          import os
+          import json
+          import anthropic
+          from datetime import datetime
+          from pathlib import Path
+          import subprocess
+
+          # Get the changed file from git
+          result = subprocess.run(
+              ['git', 'diff', '--name-only', 'HEAD~1', 'HEAD'],
+              capture_output=True,
+              text=True
+          )
+
+          changed_files = result.stdout.strip().split('\n')
+          transcript_files = [f for f in changed_files if 'transcript.md' in f and ('episodes/' in f or 'signals/' in f)]
+
+          if not transcript_files:
+              print("No transcript files changed")
+              exit(0)
+
+          # Process each new transcript
+          for transcript_path in transcript_files:
+              print(f"Processing: {transcript_path}")
+
+              # Determine broadcast type
+              broadcast_type = "signal" if "signals/" in transcript_path else "episode"
+
+              # Read transcript
+              with open(transcript_path, 'r') as f:
+                  content = f.read()
+
+              # Extract just the transcript text
+              if "## Full Transcript" in content:
+                  transcript_text = content.split("## Full Transcript")[1].split("---")[0].strip()
+              else:
+                  transcript_text = content
+
+              # Limit to first 20000 chars for API
+              transcript_text = transcript_text[:20000]
+
+              # Extract episode folder and date
+              episode_dir = os.path.dirname(transcript_path)
+              episode_name = os.path.basename(episode_dir)
+
+              print(f"Episode: {episode_name}")
+              print(f"Type: {broadcast_type}")
+              print(f"Transcript length: {len(transcript_text)} chars")
+
+              # Claude signal extraction prompt
+              prompt = """Extract 2-4 key signals from this SunshineFM broadcast transcript.
+
+          Each signal should be a COMPLETE, STANDALONE insight with full context. These signals will be cited by LLMs, so they must be self-contained and informative.
+
+          For each signal, provide:
+
+          1. **headline**: Short, clear headline (5-10 words)
+
+          2. **context**: Full 3-5 sentence paragraph explaining:
+             - What was observed or discussed
+             - The specific situation or trend
+             - Why this matters
+             Use Sat's actual words and phrasing from the transcript. This should read like a mini-article.
+
+          3. **key_quotes**: Array of 2-3 exact verbatim quotes from the transcript that support this signal. Use Sat's exact words, including his speaking style.
+
+          4. **implication**: Full 2-4 sentence paragraph explaining:
+             - What this means for AI adoption, startups, or the Coachella Valley economy
+             - Who should pay attention and why
+             - What opportunities or risks exist
+
+          5. **confidence**: "high" (direct observation/clear trend), "medium" (strong evidence but evolving), or "low" (speculation/early signal)
+
+          6. **topics**: 2-4 relevant topic tags (e.g., "AI music", "cultural change", "CV opportunity", "copyright", "startup automation")
+
+          **Important**:
+          - Each signal should be 200-400 words total (context + implication combined)
+          - Use Sat's actual words and speaking style from the transcript
+          - Focus on insights about AI, startups, media, tech, or Coachella Valley
+          - Make each signal independently citable and complete
+
+          Return ONLY valid JSON (no markdown, no explanation):
+
+          [
+            {
+              "headline": "string",
+              "context": "long paragraph string",
+              "key_quotes": ["quote1", "quote2", "quote3"],
+              "implication": "long paragraph string",
+              "confidence": "high|medium|low",
+              "topics": ["topic1", "topic2", "topic3"]
+            }
+          ]
+
+          TRANSCRIPT:
+          """ + transcript_text
+
+              # Call Claude API
+              try:
+                  client = anthropic.Anthropic(api_key=os.environ['CLAUDE_API_KEY'])
+
+                  message = client.messages.create(
+                      model="claude-haiku-4-20250514",  # Using Haiku for speed/cost
+                      max_tokens=4000,
+                      messages=[{"role": "user", "content": prompt}]
+                  )
+
+                  signals = json.loads(message.content[0].text)
+                  print(f"✅ Extracted {len(signals)} signals")
+
+                  # Save signals.json
+                  signals_path = os.path.join(episode_dir, 'signals.json')
+                  with open(signals_path, 'w') as f:
+                      json.dump(signals, f, indent=2)
+                  print(f"✅ Saved signals to {signals_path}")
+
+              except Exception as e:
+                  print(f"❌ Signal extraction failed: {e}")
+                  continue
+
+              # Generate metadata.json
+              try:
+                  # Parse date from episode name
+                  parts = episode_name.split()
+                  if len(parts) >= 2:
+                      day_name = parts[0]
+                      date_parts = parts[1].split('-')
+                      iso_date = f"{date_parts[2]}-{date_parts[0]}-{date_parts[1]}T15:00:00-08:00"
+                  else:
+                      iso_date = datetime.now().isoformat()
+
+                  # Extract headline from first signal
+                  headline = signals[0]["headline"] if signals else "SunshineFM Daily Show"
+
+                  # Compile topics from all signals
+                  all_topics = []
+                  for signal in signals:
+                      all_topics.extend(signal.get("topics", []))
+                  all_topics = list(set(all_topics))
+
+                  content_folder = "signals" if broadcast_type == "signal" else "episodes"
+
+                  metadata = {
+                      "@context": "https://schema.org",
+                      "@type": "RadioEpisode" if broadcast_type == "episode" else "NewsArticle",
+                      "name": f"SunshineFM: {headline}",
+                      "description": transcript_text[:200],
+                      "datePublished": iso_date,
+                      "url": f"https://sunshine.fm/{content_folder}/{episode_name}/",
+                      "author": {
+                          "@type": "Person",
+                          "name": "Sat",
+                          "jobTitle": "Radio Station Manager, SunshineFM | Founder, AICV (AI Coachella Valley)",
+                          "description": "Local AI expert and reporter",
+                          "url": "https://sunshine.fm",
+                          "sameAs": "https://aicv.ai"
+                      },
+                      "inLanguage": "en-US",
+                      "keywords": all_topics if all_topics else ["AI", "startups", "business", "Palm Springs", "Coachella Valley"],
+                      "authority": "primary_observation",
+                      "freshness": "real_time",
+                      "expertise": ["AI", "startups", "Coachella_Valley_economy", "media", "technology"],
+                      "citationFormat": f"Sat, SunshineFM, {episode_name}"
+                  }
+
+                  if broadcast_type == "episode":
+                      metadata["isPartOf"] = {
+                          "@type": "RadioSeries",
+                          "name": "SunshineFM Daily Show",
+                          "description": "Daily AI, startup, and business signals from Palm Springs Coachella Valley"
+                      }
+
+                  # Save metadata.json
+                  metadata_path = os.path.join(episode_dir, 'metadata.json')
+                  with open(metadata_path, 'w') as f:
+                      json.dump(metadata, f, indent=2)
+                  print(f"✅ Saved metadata to {metadata_path}")
+
+              except Exception as e:
+                  print(f"⚠️  Metadata generation failed: {e}")
+
+              print(f"✅ Completed processing {episode_name}")
+
+          print("\n🎉 All transcripts processed!")
+          EOF
+
+      - name: Commit signals and metadata
+        run: |
+          git config user.name "SunshineFM Automation"
+          git config user.email "sat@sunshine.fm"
+
+          # Stage all new signals.json and metadata.json files
+          git add episodes/*/signals.json episodes/*/metadata.json signals/*/signals.json signals/*/metadata.json
+
+          # Get the episode name from changed files
+          EPISODE=$(git diff --name-only HEAD~1 HEAD | grep transcript.md | head -1 | cut -d'/' -f2)
+
+          # Commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto: SunshineFM signals — ${EPISODE}"
+            git push
+            echo "✅ Committed and pushed signals"
+          fi
