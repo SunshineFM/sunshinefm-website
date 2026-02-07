@@ -347,15 +347,27 @@ jobs:
           print(f"{'='*70}")
           EOF
 
+      - name: Generate signals HTML pages & index
+        if: steps.find-episodes.outputs.has_work == 'true'
+        run: |
+          echo "Generating signals.html + index + sitemap..."
+          python3 scripts/generate_all_signals_pages.py
+          echo "✅ All signals pages generated"
+
       - name: Commit signals and metadata
         if: steps.find-episodes.outputs.has_work == 'true'
         run: |
           git config user.name "SunshineFM Automation"
           git config user.email "sat@sunshine.fm"
 
-          # Stage all new signals.json and metadata.json files
+          # Stage all signals files
           git add -A episodes/*/signals.json episodes/*/metadata.json 2>/dev/null || true
           git add -A signals/*/signals.json signals/*/metadata.json 2>/dev/null || true
+          git add -A episodes/*/signals.html 2>/dev/null || true
+
+          # Stage signals index and sitemap
+          git add -A signals/index.html 2>/dev/null || true
+          git add -A sitemap.xml 2>/dev/null || true
 
           # Check if there are changes to commit
           if git diff --staged --quiet; then
