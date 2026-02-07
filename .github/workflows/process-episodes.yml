@@ -348,26 +348,27 @@ jobs:
           EOF
 
       - name: Generate signals HTML pages & index
-        if: steps.find-episodes.outputs.has_work == 'true'
         run: |
           echo "Generating signals.html + index + sitemap..."
           python3 scripts/generate_all_signals_pages.py
           echo "✅ All signals pages generated"
 
       - name: Commit signals and metadata
-        if: steps.find-episodes.outputs.has_work == 'true'
         run: |
           git config user.name "SunshineFM Automation"
           git config user.email "sat@sunshine.fm"
 
-          # Stage all signals files
-          git add -A episodes/*/signals.json episodes/*/metadata.json 2>/dev/null || true
-          git add -A signals/*/signals.json signals/*/metadata.json 2>/dev/null || true
-          git add -A episodes/*/signals.html 2>/dev/null || true
+          # Show what was generated
+          echo "Files generated:"
+          ls -la signals/ || true
+          find episodes -name "signals.html" | head -5 || true
 
-          # Stage signals index and sitemap
-          git add -A signals/index.html 2>/dev/null || true
-          git add -A sitemap.xml 2>/dev/null || true
+          # Stage everything (simpler approach)
+          git add episodes/ signals/ sitemap.xml
+
+          # Check what changed
+          echo "Changes to commit:"
+          git status --short
 
           # Check if there are changes to commit
           if git diff --staged --quiet; then
@@ -375,13 +376,8 @@ jobs:
             exit 0
           fi
 
-          # Get episode names
-          EPISODES=$(git diff --staged --name-only | grep signals.json | xargs -I {} dirname {} | xargs -I {} basename {})
-
-          # Commit
-          if [ -n "$EPISODES" ]; then
-            FIRST_EPISODE=$(echo "$EPISODES" | head -1)
-            git commit -m "Auto: SunshineFM signals — ${FIRST_EPISODE}"
-            git push
-            echo "✅ Committed and pushed signals"
-          fi
+          # Commit and push
+          CHANGED_COUNT=$(git diff --staged --name-only | wc -l)
+          git commit -m "Auto: Regenerate signals HTML + index ($CHANGED_COUNT files)"
+          git push
+          echo "✅ Committed and pushed $CHANGED_COUNT files"
