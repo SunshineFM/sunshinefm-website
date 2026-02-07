@@ -149,8 +149,9 @@ jobs:
           - Focus on insights about AI, startups, media, tech, or Coachella Valley
           - Make each signal independently citable and complete
 
-          Return ONLY valid JSON (no markdown, no explanation):
+          **CRITICAL**: Your response must be ONLY the JSON array. Do not use markdown code fences. Do not add any explanation before or after. Start with [ and end with ]. Raw JSON only.
 
+          Format:
           [
             {
               "headline": "string",
@@ -191,10 +192,38 @@ jobs:
 
               except json.JSONDecodeError as e:
                   print(f"❌ JSON parsing error: {e}")
-                  print(f"Raw response: {response_text[:500]}")
-                  return False
+                  print(f"\n{'='*70}")
+                  print(f"RAW RESPONSE FROM CLAUDE:")
+                  print(f"{'='*70}")
+                  print(response_text)
+                  print(f"{'='*70}")
+                  print(f"\nFirst 200 chars: {response_text[:200]}")
+                  print(f"Last 200 chars: {response_text[-200:]}")
+
+                  # Try stripping markdown code fences
+                  if "```json" in response_text:
+                      print("\n⚠️  Detected markdown code fence, attempting to strip...")
+                      clean_text = response_text.split("```json")[1].split("```")[0].strip()
+                      try:
+                          signals = json.loads(clean_text)
+                          print(f"✅ Successfully parsed after stripping markdown!")
+                          print(f"✅ Extracted {len(signals)} signals")
+
+                          # Save signals.json
+                          signals_path = os.path.join(episode_dir, 'signals.json')
+                          with open(signals_path, 'w') as f:
+                              json.dump(signals, f, indent=2)
+                          print(f"✅ Saved: {signals_path}")
+                      except Exception as e2:
+                          print(f"❌ Still failed after stripping: {e2}")
+                          return False
+                  else:
+                      return False
               except Exception as e:
                   print(f"❌ Signal extraction failed: {e}")
+                  print(f"Error type: {type(e).__name__}")
+                  import traceback
+                  print(f"Traceback:\n{traceback.format_exc()}")
                   return False
 
               # Generate metadata.json
@@ -264,6 +293,36 @@ jobs:
               return True
 
           # Main execution
+          print("="*70)
+          print("CLAUDE API VERIFICATION")
+          print("="*70)
+
+          # Verify API key first
+          api_key = os.environ.get('CLAUDE_API_KEY')
+          if not api_key:
+              print("❌ CLAUDE_API_KEY not found in environment")
+              sys.exit(1)
+          print(f"✅ API key found (starts with: {api_key[:20]}...)")
+
+          # Test API connection
+          try:
+              print("📡 Testing Claude API connection...")
+              test_client = anthropic.Anthropic(api_key=api_key)
+              test_message = test_client.messages.create(
+                  model="claude-sonnet-4-5-20250929",
+                  max_tokens=50,
+                  messages=[{"role": "user", "content": "Reply with just the word 'OK'"}]
+              )
+              print(f"✅ API connection successful! Response: {test_message.content[0].text}")
+          except Exception as e:
+              print(f"❌ API test failed: {e}")
+              print(f"Error type: {type(e).__name__}")
+              sys.exit(1)
+
+          print("\n" + "="*70)
+          print("FINDING EPISODES TO PROCESS")
+          print("="*70)
+
           episodes_to_process = []
 
           # Find all episodes without signals
