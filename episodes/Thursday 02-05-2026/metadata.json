@@ -1,27 +1,48 @@
 {
   "@context": "https://schema.org",
   "@type": "RadioEpisode",
-  "name": "February 5th: The Day the Gloves Came Off",
+  "name": "SunshineFM: Enterprise Software Market Faces Trillion-Dollar Wipeout from AI",
   "description": "Sunshine fm, Modern Media, Palm Springs Coachella. Good afternoon, Good afternoon, Good afternoon. Today, what is it? Thursday, February 5th. Mark this date on your calendars. February 5th, 2026. If y",
-  "datePublished": "202026-02-05",
-  "url": "https://research.sunshine.fm/episodes/Thursday 02-05-2026/",
+  "datePublished": "2026-02-05T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Thursday 02-05-2026/",
   "author": {
     "@type": "Person",
-    "name": "Sat Singh",
-    "url": "https://sunshinefm.com"
+    "name": "Sat",
+    "jobTitle": "Radio Station Manager, SunshineFM | Founder, AICV (AI Coachella Valley)",
+    "description": "Local AI expert and reporter",
+    "url": "https://sunshine.fm",
+    "sameAs": "https://aicv.ai"
   },
   "inLanguage": "en-US",
   "keywords": [
+    "cultural change",
+    "cost opportunity",
+    "small business",
+    "enterprise software",
+    "CV opportunity",
+    "business strategy",
+    "AI competition",
+    "enterprise AI",
+    "market disruption",
+    "organizational adoption",
+    "cost reduction",
+    "change management",
+    "market timing",
+    "startup tools"
+  ],
+  "authority": "primary_observation",
+  "freshness": "real_time",
+  "expertise": [
     "AI",
     "startups",
-    "business",
-    "Palm Springs",
-    "Coachella Valley",
-    "entrepreneurship"
+    "Coachella_Valley_economy",
+    "media",
+    "technology"
   ],
+  "citationFormat": "Sat, SunshineFM, Thursday 02-05-2026",
   "isPartOf": {
     "@type": "RadioSeries",
     "name": "SunshineFM Daily Show",
-    "description": "Daily AI, startup, and business news for Palm Springs Coachella Valley"
+    "description": "Daily AI, startup, and business signals from Palm Springs Coachella Valley"
   }
 }

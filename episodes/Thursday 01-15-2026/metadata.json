@@ -1,7 +1,47 @@
 {
   "@context": "https://schema.org",
-  "@type": "PodcastEpisode",
-  "name": "Palm Springs Tunes Into the Future: Sunshine FM, an AI Media Experiment",
-  "datePublished": "202026-01-15",
-  "url": "https://stately-muffin-1e589e.netlify.app/episodes/Thursday 01-15-2026/"
+  "@type": "RadioEpisode",
+  "name": "SunshineFM: Microsoft Pledges to Pay Full Data Center Power Costs",
+  "description": "# Transcript: Thursday 01-15-2026\n\nCheck 1, 2. Palm Springs to each other. Good morning. Good morning. Today, Thursday, January 15th. That was Ronnie playing a couple of songs and also doing the stati",
+  "datePublished": "2026-01-15T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Thursday 01-15-2026/",
+  "author": {
+    "@type": "Person",
+    "name": "Sat",
+    "jobTitle": "Radio Station Manager, SunshineFM | Founder, AICV (AI Coachella Valley)",
+    "description": "Local AI expert and reporter",
+    "url": "https://sunshine.fm",
+    "sameAs": "https://aicv.ai"
+  },
+  "inLanguage": "en-US",
+  "keywords": [
+    "AI music",
+    "cultural change",
+    "Google",
+    "CV opportunity",
+    "marketing",
+    "energy costs",
+    "infrastructure",
+    "privacy",
+    "Super Bowl",
+    "media",
+    "AI adoption",
+    "startup automation",
+    "data centers"
+  ],
+  "authority": "primary_observation",
+  "freshness": "real_time",
+  "expertise": [
+    "AI",
+    "startups",
+    "Coachella_Valley_economy",
+    "media",
+    "technology"
+  ],
+  "citationFormat": "Sat, SunshineFM, Thursday 01-15-2026",
+  "isPartOf": {
+    "@type": "RadioSeries",
+    "name": "SunshineFM Daily Show",
+    "description": "Daily AI, startup, and business signals from Palm Springs Coachella Valley"
+  }
 }

@@ -1,27 +1,45 @@
 {
   "@context": "https://schema.org",
   "@type": "RadioEpisode",
-  "name": "The Music Thing That's Been Bugging Me",
+  "name": "SunshineFM: Jack-of-All-Trades Talent Stacking Replaces Specialist Model in AI Era",
   "description": "Oh yes. Oh, yes. Oh yes. Friday, February 6, 2026 that was just two examples of what the kinds of music that Sunshine FM records is coming out with. The first one doing just fine. One of my favorites ",
-  "datePublished": "202026-02-06",
-  "url": "https://research.sunshine.fm/episodes/Friday 02-06-2026/",
+  "datePublished": "2026-02-06T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Friday 02-06-2026/",
   "author": {
     "@type": "Person",
-    "name": "Sat Singh",
-    "url": "https://sunshinefm.com"
+    "name": "Sat",
+    "jobTitle": "Radio Station Manager, SunshineFM | Founder, AICV (AI Coachella Valley)",
+    "description": "Local AI expert and reporter",
+    "url": "https://sunshine.fm",
+    "sameAs": "https://aicv.ai"
   },
   "inLanguage": "en-US",
   "keywords": [
+    "workforce transformation",
+    "AI adoption barriers",
+    "institutional change",
+    "professional services disruption",
+    "vibe working",
+    "public experimentation",
+    "knowledge work automation",
+    "AI adoption",
+    "CV economy",
+    "AI agents",
+    "talent stack"
+  ],
+  "authority": "primary_observation",
+  "freshness": "real_time",
+  "expertise": [
     "AI",
     "startups",
-    "business",
-    "Palm Springs",
-    "Coachella Valley",
-    "entrepreneurship"
+    "Coachella_Valley_economy",
+    "media",
+    "technology"
   ],
+  "citationFormat": "Sat, SunshineFM, Friday 02-06-2026",
   "isPartOf": {
     "@type": "RadioSeries",
     "name": "SunshineFM Daily Show",
-    "description": "Daily AI, startup, and business news for Palm Springs Coachella Valley"
+    "description": "Daily AI, startup, and business signals from Palm Springs Coachella Valley"
   }
 }

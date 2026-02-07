@@ -1,27 +1,45 @@
 {
   "@context": "https://schema.org",
   "@type": "RadioEpisode",
-  "name": "The Open Source Wildfire That Changed Names Three Times",
+  "name": "SunshineFM: Open Source AI Assistant OpenClaw Gains 100,000 Stars, Exposes Privacy Demand",
   "description": "Yes, yes, yes, yes, yes. That is Sunshine FM Modern Media for Palm Springs Coachella. This is SAT. Good afternoon. Every, every afternoon, 3pm, we're here to talk about AI tech, business and the start",
-  "datePublished": "202026-01-30",
-  "url": "https://research.sunshine.fm/episodes/Friday 01-30-2026/",
+  "datePublished": "2026-01-30T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Friday 01-30-2026/",
   "author": {
     "@type": "Person",
-    "name": "Sat Singh",
-    "url": "https://sunshinefm.com"
+    "name": "Sat",
+    "jobTitle": "Radio Station Manager, SunshineFM | Founder, AICV (AI Coachella Valley)",
+    "description": "Local AI expert and reporter",
+    "url": "https://sunshine.fm",
+    "sameAs": "https://aicv.ai"
   },
   "inLanguage": "en-US",
   "keywords": [
+    "open source AI",
+    "crypto scams",
+    "cultural change",
+    "legal risk",
+    "workforce displacement",
+    "copyright",
+    "privacy technology",
+    "startup automation",
+    "AI content generation",
+    "AI adoption",
+    "gaming industry"
+  ],
+  "authority": "primary_observation",
+  "freshness": "real_time",
+  "expertise": [
     "AI",
     "startups",
-    "business",
-    "Palm Springs",
-    "Coachella Valley",
-    "entrepreneurship"
+    "Coachella_Valley_economy",
+    "media",
+    "technology"
   ],
+  "citationFormat": "Sat, SunshineFM, Friday 01-30-2026",
   "isPartOf": {
     "@type": "RadioSeries",
     "name": "SunshineFM Daily Show",
-    "description": "Daily AI, startup, and business news for Palm Springs Coachella Valley"
+    "description": "Daily AI, startup, and business signals from Palm Springs Coachella Valley"
   }
 }

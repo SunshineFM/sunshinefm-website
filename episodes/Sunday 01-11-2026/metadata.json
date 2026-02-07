@@ -1,10 +1,10 @@
 {
   "@context": "https://schema.org",
   "@type": "RadioEpisode",
-  "name": "SunshineFM: OpenAI Pivots from Research to Products, Slashing Creative AI Funding",
-  "description": "Sa. Well that ending wasn't too bad, was it Wasn't quite what I was looking for in terms of a 70s, laid back kind of social commentary about how the generation who were teenagers basically and young a",
-  "datePublished": "2026-02-03T15:00:00-08:00",
-  "url": "https://sunshine.fm/episodes/Tuesday 02-03-2026/",
+  "name": "SunshineFM: Solo Founder Launches Year-Long Public AI Media Experiment",
+  "description": "Yeah, I think we're on. Hello, world. Today is January 11th. The time is 1:11. You're listening to Sunshine FM. This is SAT, and this is an experiment. Sunshine FM is modern media for Palm Springs Coa",
+  "datePublished": "2026-01-11T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Sunday 01-11-2026/",
   "author": {
     "@type": "Person",
     "name": "Sat",
@@ -15,16 +15,18 @@
   },
   "inLanguage": "en-US",
   "keywords": [
-    "AI real estate",
-    "developer tools",
-    "AI coding",
+    "media transformation",
+    "operational leverage",
+    "media jobs",
     "CV opportunity",
-    "property development",
-    "creative tools",
-    "startup innovation",
-    "OpenAI",
-    "AI adoption",
-    "startup automation"
+    "local media",
+    "AI replacement",
+    "content automation",
+    "community building",
+    "startup automation",
+    "market positioning",
+    "build in public",
+    "AI agents"
   ],
   "authority": "primary_observation",
   "freshness": "real_time",
@@ -35,7 +37,7 @@
     "media",
     "technology"
   ],
-  "citationFormat": "Sat, SunshineFM, Tuesday 02-03-2026",
+  "citationFormat": "Sat, SunshineFM, Sunday 01-11-2026",
   "isPartOf": {
     "@type": "RadioSeries",
     "name": "SunshineFM Daily Show",

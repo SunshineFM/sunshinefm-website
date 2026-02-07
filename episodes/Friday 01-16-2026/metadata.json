@@ -1,10 +1,10 @@
 {
   "@context": "https://schema.org",
   "@type": "RadioEpisode",
-  "name": "SunshineFM: OpenAI Pivots from Research to Products, Slashing Creative AI Funding",
-  "description": "Sa. Well that ending wasn't too bad, was it Wasn't quite what I was looking for in terms of a 70s, laid back kind of social commentary about how the generation who were teenagers basically and young a",
-  "datePublished": "2026-02-03T15:00:00-08:00",
-  "url": "https://sunshine.fm/episodes/Tuesday 02-03-2026/",
+  "name": "SunshineFM: AI Assistant Market Shifts from Model Quality to Integration Wars",
+  "description": "# Transcript: Friday 01-16-2026\n\nHello, hello, hello. That was Rani Brit, Sikh from London, checking into the hotels here in Pontiff. Palm Springs Coachella. You're listening to Sunshine fm, modern me",
+  "datePublished": "2026-01-16T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Friday 01-16-2026/",
   "author": {
     "@type": "Person",
     "name": "Sat",
@@ -15,16 +15,17 @@
   },
   "inLanguage": "en-US",
   "keywords": [
-    "AI real estate",
-    "developer tools",
-    "AI coding",
+    "small business",
+    "AI infrastructure",
     "CV opportunity",
-    "property development",
-    "creative tools",
-    "startup innovation",
-    "OpenAI",
+    "retail transformation",
+    "regional development",
+    "enterprise AI",
     "AI adoption",
-    "startup automation"
+    "agentic commerce",
+    "startup strategy",
+    "data centers",
+    "AI shopping"
   ],
   "authority": "primary_observation",
   "freshness": "real_time",
@@ -35,7 +36,7 @@
     "media",
     "technology"
   ],
-  "citationFormat": "Sat, SunshineFM, Tuesday 02-03-2026",
+  "citationFormat": "Sat, SunshineFM, Friday 01-16-2026",
   "isPartOf": {
     "@type": "RadioSeries",
     "name": "SunshineFM Daily Show",

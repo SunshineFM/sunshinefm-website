@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@type": "RadioEpisode",
+  "name": "SunshineFM: Anthropic CEO Predicts 10-20% Unemployment Alongside GDP Growth",
+  "description": "Sam, It's. You're listening to Sunshine fm, Modern Media, Palm Springs Coachella. That was one of our AI artists, Rani from London, out here on a PS Getaway. That's the name of her new album. And that",
+  "datePublished": "2026-01-21T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Wednesday 01-21-2026/",
+  "author": {
+    "@type": "Person",
+    "name": "Sat",
+    "jobTitle": "Radio Station Manager, SunshineFM | Founder, AICV (AI Coachella Valley)",
+    "description": "Local AI expert and reporter",
+    "url": "https://sunshine.fm",
+    "sameAs": "https://aicv.ai"
+  },
+  "inLanguage": "en-US",
+  "keywords": [
+    "AI economic impact",
+    "AI education",
+    "CV opportunity",
+    "workforce displacement",
+    "economic inequality",
+    "digital divide",
+    "AI regulation",
+    "hospitality industry",
+    "workforce development",
+    "entry-level jobs",
+    "local government",
+    "federal policy",
+    "transparency standards"
+  ],
+  "authority": "primary_observation",
+  "freshness": "real_time",
+  "expertise": [
+    "AI",
+    "startups",
+    "Coachella_Valley_economy",
+    "media",
+    "technology"
+  ],
+  "citationFormat": "Sat, SunshineFM, Wednesday 01-21-2026",
+  "isPartOf": {
+    "@type": "RadioSeries",
+    "name": "SunshineFM Daily Show",
+    "description": "Daily AI, startup, and business signals from Palm Springs Coachella Valley"
+  }
+}

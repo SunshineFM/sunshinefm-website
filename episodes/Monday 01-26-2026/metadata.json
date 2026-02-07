@@ -1,22 +1,48 @@
 {
   "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "name": "The Boring Billions",
+  "@type": "RadioEpisode",
+  "name": "SunshineFM: Enterprise AI Training Market Hits $4B Valuation Signal",
   "description": "Sam. Oh, come on. That was AI. No way. Well, I'm here to tell you, yes, that was AI generated music. Now, now, having said that, I think my son would run in here and just basically say, I can tell AI.",
-  "datePublished": "202026-01-26",
-  "url": "https://research.sunshine.fm/signals/Monday 01-26-2026/",
+  "datePublished": "2026-01-26T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Monday 01-26-2026/",
   "author": {
     "@type": "Person",
-    "name": "Sat Singh",
-    "url": "https://sunshinefm.com"
+    "name": "Sat",
+    "jobTitle": "Radio Station Manager, SunshineFM | Founder, AICV (AI Coachella Valley)",
+    "description": "Local AI expert and reporter",
+    "url": "https://sunshine.fm",
+    "sameAs": "https://aicv.ai"
   },
   "inLanguage": "en-US",
   "keywords": [
+    "safety guardrails",
+    "AI healthcare",
+    "cultural change",
+    "CV opportunity",
+    "home care",
+    "AI economics",
+    "enterprise AI",
+    "workforce coordination",
+    "AI training",
+    "wealth inequality",
+    "startup strategy",
+    "social impact",
+    "AI agents",
+    "startup funding"
+  ],
+  "authority": "primary_observation",
+  "freshness": "real_time",
+  "expertise": [
     "AI",
     "startups",
-    "business",
-    "Palm Springs",
-    "Coachella Valley",
-    "entrepreneurship"
-  ]
+    "Coachella_Valley_economy",
+    "media",
+    "technology"
+  ],
+  "citationFormat": "Sat, SunshineFM, Monday 01-26-2026",
+  "isPartOf": {
+    "@type": "RadioSeries",
+    "name": "SunshineFM Daily Show",
+    "description": "Daily AI, startup, and business signals from Palm Springs Coachella Valley"
+  }
 }

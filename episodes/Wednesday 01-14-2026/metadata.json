@@ -1,10 +1,10 @@
 {
   "@context": "https://schema.org",
   "@type": "RadioEpisode",
-  "name": "SunshineFM: OpenAI Pivots from Research to Products, Slashing Creative AI Funding",
-  "description": "Sa. Well that ending wasn't too bad, was it Wasn't quite what I was looking for in terms of a 70s, laid back kind of social commentary about how the generation who were teenagers basically and young a",
-  "datePublished": "2026-02-03T15:00:00-08:00",
-  "url": "https://sunshine.fm/episodes/Tuesday 02-03-2026/",
+  "name": "SunshineFM: Billionaires Building Bunkers While Schools Ignore AI Education",
+  "description": "# Transcript: Wednesday 01-14-2026\n\nSa. I heard the time to click inside the shed the day is officially dead Suddenly the water turns electric blue A chemical trick nothing is true the palm trees are ",
+  "datePublished": "2026-01-14T15:00:00-08:00",
+  "url": "https://sunshine.fm/episodes/Wednesday 01-14-2026/",
   "author": {
     "@type": "Person",
     "name": "Sat",
@@ -15,16 +15,17 @@
   },
   "inLanguage": "en-US",
   "keywords": [
-    "AI real estate",
-    "developer tools",
-    "AI coding",
+    "AI adoption barriers",
+    "institutional adaptation",
+    "AI education",
     "CV opportunity",
-    "property development",
-    "creative tools",
-    "startup innovation",
-    "OpenAI",
-    "AI adoption",
-    "startup automation"
+    "AI education gap",
+    "institutional change",
+    "talent attraction",
+    "startup culture",
+    "education reform",
+    "economic development",
+    "wealth inequality"
   ],
   "authority": "primary_observation",
   "freshness": "real_time",
@@ -35,7 +36,7 @@
     "media",
     "technology"
   ],
-  "citationFormat": "Sat, SunshineFM, Tuesday 02-03-2026",
+  "citationFormat": "Sat, SunshineFM, Wednesday 01-14-2026",
   "isPartOf": {
     "@type": "RadioSeries",
     "name": "SunshineFM Daily Show",
