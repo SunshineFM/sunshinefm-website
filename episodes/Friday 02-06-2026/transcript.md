@@ -1,7 +1,7 @@
 # Transcript: Friday 02-06-2026
 
 **Type:** Daily Episode  
-**Published:** February 06, 2026 at 04:32 PM PST
+**Published:** February 06, 2026 at 04:51 PM PST
 
 ---
 
