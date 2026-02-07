@@ -12,7 +12,7 @@ from pathlib import Path
 WEBSITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EPISODES_DIR = os.path.join(WEBSITE_DIR, "episodes")
 SIGNALS_DIR = os.path.join(WEBSITE_DIR, "signals")
-BASE_URL = "https://sunshine.fm"
+BASE_URL = "https://research.sunshine.fm"
 
 def parse_episode_date(episode_name):
     """Parse episode folder name to get ISO date"""
